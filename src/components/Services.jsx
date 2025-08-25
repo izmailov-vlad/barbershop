@@ -1,5 +1,6 @@
 import React from 'react'
 import { COLORS } from '../constants/colors'
+import { Button } from './ui/Button'
 
 const Services = () => {
     const mainServices = [
@@ -105,15 +106,7 @@ const Services = () => {
                 </div>
 
                 <div className="services-cta">
-                    <button
-                        className="btn btn-primary btn-large"
-                        style={{
-                            backgroundColor: COLORS.BTN_PRIMARY,
-                            color: COLORS.BTN_TEXT
-                        }}
-                    >
-                        Записаться
-                    </button>
+                    <Button variant="primary" size="large">Записаться</Button>
                 </div>
             </div>
         </section>

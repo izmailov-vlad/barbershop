@@ -1,5 +1,6 @@
 import React from 'react'
 import { COLORS } from '../constants/colors'
+import { Button } from './ui/Button'
 
 const Gallery = () => {
     const galleryItems = [
@@ -39,15 +40,9 @@ const Gallery = () => {
                 <div className="gallery-cta" style={{ backgroundColor: COLORS.BG_SECONDARY }}>
                     <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Приезжайте к нам в гости!</h3>
                     <p style={{ color: COLORS.TEXT_SECONDARY }}>Встретим вас, предложим напитки, сделаем крутую стрижку и пообщаемся на мужские темы</p>
-                    <button
-                        className="btn btn-primary btn-large"
-                        style={{
-                            backgroundColor: COLORS.BTN_PRIMARY,
-                            color: COLORS.BTN_TEXT
-                        }}
-                    >
+                    <Button variant="primary" size="large">
                         Записаться на стрижку
-                    </button>
+                    </Button>
                 </div>
             </div>
         </section>

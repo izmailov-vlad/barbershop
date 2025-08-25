@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { COLORS } from '../constants/colors'
+import { Button } from './ui/Button'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,15 +29,7 @@ const Header = () => {
 
                     <div className="header-actions">
                         <a href="tel:+79936380008" className="phone" style={{ color: COLORS.TEXT_PRIMARY }}>+7 (993) 638-00-08</a>
-                        <button
-                            className="btn btn-primary"
-                            style={{
-                                backgroundColor: COLORS.BTN_PRIMARY,
-                                color: COLORS.BTN_TEXT
-                            }}
-                        >
-                            Записаться
-                        </button>
+                        <Button variant="primary">Записаться</Button>
                         <button
                             className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
                             onClick={toggleMenu}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { COLORS } from '../constants/colors'
+import { Button } from './ui/Button'
 
 const Hero = () => {
     return (
@@ -20,25 +21,12 @@ const Hero = () => {
                             Каждая 8 стрижка - бесплатно
                         </p>
                         <div className="hero-actions">
-                            <button
-                                className="btn btn-primary btn-large"
-                                style={{
-                                    backgroundColor: COLORS.BTN_PRIMARY,
-                                    color: COLORS.BTN_TEXT
-                                }}
-                            >
+                            <Button variant="primary" size="large">
                                 Записаться на стрижку
-                            </button>
-                            <button
-                                className="btn btn-secondary btn-large"
-                                style={{
-                                    color: COLORS.BTN_PRIMARY,
-                                    borderColor: COLORS.BTN_PRIMARY
-                                }}
-                            >
+                            </Button>
+                            <Button variant="secondary" size="large">
                                 Услуги
-                            </button>
-
+                            </Button>
                         </div>
                     </div>
 

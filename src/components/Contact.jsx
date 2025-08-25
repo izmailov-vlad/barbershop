@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { COLORS } from '../constants/colors'
+import { Button } from './ui/Button'
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -105,16 +106,9 @@ const Contact = () => {
                                 />
                             </div>
 
-                            <button
-                                type="submit"
-                                className="btn btn-primary btn-large"
-                                style={{
-                                    backgroundColor: COLORS.BTN_PRIMARY,
-                                    color: COLORS.BTN_TEXT
-                                }}
-                            >
+                            <Button type="submit" variant="primary" size="large">
                                 Отправить
-                            </button>
+                            </Button>
                         </form>
                     </div>
                 </div>

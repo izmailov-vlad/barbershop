@@ -1,5 +1,6 @@
 import React from 'react'
 import { COLORS } from '../constants/colors'
+import { Button } from './ui/Button'
 
 const Team = () => {
     const teamMembers = [
@@ -72,15 +73,9 @@ const Team = () => {
                                     <h4 style={{ color: COLORS.TEXT_PRIMARY }}>{member.name}</h4>
                                     <p className="member-position" style={{ color: COLORS.TEXT_SECONDARY }}>{member.position}</p>
                                     <p className="member-description" style={{ color: COLORS.TEXT_SECONDARY }}>{member.description}</p>
-                                    <button
-                                        className="btn btn-primary"
-                                        style={{
-                                            backgroundColor: COLORS.BTN_PRIMARY,
-                                            color: COLORS.BTN_TEXT
-                                        }}
-                                    >
+                                    <Button variant="primary" size="medium">
                                         Записаться к мастеру
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
                         ))}

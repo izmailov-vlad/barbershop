@@ -1,0 +1,124 @@
+:root {
+    /* Основные цвета бренда */
+    --color-primary: #1a1a1a;
+    --color-secondary: #8B4513;
+    --color-accent: #D4AF37;
+
+    /* Цвета текста */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #CCCCCC;
+
+    /* Цвета фона */
+    --color-bg-primary: #000000;
+    --color-bg-secondary: #1a1a1a;
+
+    /* Цвета кнопок */
+    --color-btn-primary: #D4AF37;
+    --color-btn-secondary: #8B4513;
+    --color-btn-text: #000000;
+
+    /* Цвета границ и разделителей */
+    --color-border: #333333;
+
+    /* Цвета выделений */
+    --color-highlight: #FFD700;
+
+    /* Дополнительные цвета для состояний */
+    --color-hover: #B8941F;
+    --color-active: #8B6F1A;
+    --color-disabled: #666666;
+    --color-success: #28a745;
+    --color-error: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+}
+
+/* Утилитарные классы для цветов */
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-highlight {
+    color: var(--color-highlight);
+}
+
+.bg-primary {
+    background-color: var(--color-bg-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-bg-secondary);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.border-primary {
+    border-color: var(--color-border);
+}
+
+.border-accent {
+    border-color: var(--color-accent);
+}
+
+/* Классы для кнопок */
+.btn-primary {
+    background-color: var(--color-btn-primary);
+    color: var(--color-btn-text);
+    border: none;
+}
+
+.btn-secondary {
+    background-color: var(--color-btn-secondary);
+    color: var(--color-text-primary);
+    border: none;
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-btn-text);
+    border: none;
+}
+
+/* Состояния наведения */
+.btn-primary:hover {
+    background-color: var(--color-hover);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-hover);
+}
+
+.btn-accent:hover {
+    background-color: var(--color-hover);
+}
+
+/* Состояния активности */
+.btn-primary:active {
+    background-color: var(--color-active);
+}
+
+.btn-secondary:active {
+    background-color: var(--color-active);
+}
+
+.btn-accent:active {
+    background-color: var(--color-active);
+}
+
+/* Состояния отключения */
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-accent:disabled {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+}

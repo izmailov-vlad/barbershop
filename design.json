@@ -1,0 +1,96 @@
+{
+    "brand": {
+        "name": "Барбершоп 'Крутт'",
+        "website": "https://krutt.ru/",
+        "description": "Мужская парикмахерская с оригинальной концепцией"
+    },
+    "colorPalette": {
+        "primary": {
+            "main": "#1a1a1a",
+            "description": "Основной темный цвет для фона и текста",
+            "hex": "#1a1a1a",
+            "rgb": "26, 26, 26"
+        },
+        "secondary": {
+            "main": "#8B4513",
+            "description": "Коричневый цвет в стиле барбершопа",
+            "hex": "#8B4513",
+            "rgb": "139, 69, 19"
+        },
+        "accent": {
+            "main": "#D4AF37",
+            "description": "Золотистый акцентный цвет",
+            "hex": "#D4AF37",
+            "rgb": "212, 175, 55"
+        },
+        "text": {
+            "primary": "#FFFFFF",
+            "description": "Основной цвет текста - белый",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255",
+            "secondary": "#CCCCCC",
+            "secondaryDescription": "Вторичный цвет текста - светло-серый",
+            "secondaryHex": "#CCCCCC",
+            "secondaryRgb": "204, 204, 204"
+        },
+        "background": {
+            "main": "#000000",
+            "description": "Основной фон - черный",
+            "hex": "#000000",
+            "rgb": "0, 0, 0",
+            "secondary": "#1a1a1a",
+            "secondaryDescription": "Вторичный фон - темно-серый",
+            "secondaryHex": "#1a1a1a",
+            "secondaryRgb": "26, 26, 26"
+        },
+        "buttons": {
+            "primary": "#D4AF37",
+            "description": "Цвет основных кнопок - золотистый",
+            "hex": "#D4AF37",
+            "rgb": "212, 175, 55",
+            "secondary": "#8B4513",
+            "secondaryDescription": "Цвет вторичных кнопок - коричневый",
+            "secondaryHex": "#8B4513",
+            "secondaryRgb": "139, 69, 19"
+        },
+        "borders": {
+            "main": "#333333",
+            "description": "Цвет границ - темно-серый",
+            "hex": "#333333",
+            "rgb": "51, 51, 51"
+        },
+        "highlights": {
+            "main": "#FFD700",
+            "description": "Цвет выделений - яркий золотой",
+            "hex": "#FFD700",
+            "rgb": "255, 215, 0"
+        }
+    },
+    "typography": {
+        "headings": {
+            "color": "#FFFFFF",
+            "fontFamily": "Arial, sans-serif",
+            "fontWeight": "bold"
+        },
+        "body": {
+            "color": "#CCCCCC",
+            "fontFamily": "Arial, sans-serif",
+            "fontWeight": "normal"
+        },
+        "buttons": {
+            "color": "#000000",
+            "fontFamily": "Arial, sans-serif",
+            "fontWeight": "bold"
+        }
+    },
+    "designNotes": {
+        "style": "Классический мужской стиль барбершопа",
+        "mood": "Премиум, элегантный, мужской",
+        "inspiration": "Традиционные барбершопы с современным подходом",
+        "colorUsage": "Темная цветовая схема с золотистыми акцентами создает премиальную атмосферу"
+    },
+    "accessibility": {
+        "contrastRatio": "Высокий контраст между темным фоном и светлым текстом",
+        "recommendations": "Цвета соответствуют стандартам доступности WCAG 2.1"
+    }
+}

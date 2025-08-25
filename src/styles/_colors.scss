@@ -1,0 +1,176 @@
+// Цветовая палитра барбершопа "Крутт"
+// Основные цвета бренда
+$color-primary: #1a1a1a;
+$color-secondary: #8B4513;
+$color-accent: #D4AF37;
+
+// Цвета текста
+$color-text-primary: #FFFFFF;
+$color-text-secondary: #CCCCCC;
+
+// Цвета фона
+$color-bg-primary: #000000;
+$color-bg-secondary: #1a1a1a;
+
+// Цвета кнопок
+$color-btn-primary: #D4AF37;
+$color-btn-secondary: #8B4513;
+$color-btn-text: #000000;
+
+// Цвета границ и разделителей
+$color-border: #333333;
+
+// Цвета выделений
+$color-highlight: #FFD700;
+
+// Дополнительные цвета для состояний
+$color-hover: #B8941F;
+$color-active: #8B6F1A;
+$color-disabled: #666666;
+
+// Системные цвета
+$color-success: #28a745;
+$color-error: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+// Миксины для цветов
+@mixin text-color($color) {
+    color: $color;
+}
+
+@mixin bg-color($color) {
+    background-color: $color;
+}
+
+@mixin border-color($color) {
+    border-color: $color;
+}
+
+// Миксины для кнопок
+@mixin button-style($bg-color, $text-color: $color-btn-text) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+
+    &:active {
+        background-color: darken($bg-color, 15%);
+    }
+
+    &:disabled {
+        background-color: $color-disabled;
+        cursor: not-allowed;
+    }
+}
+
+// Миксины для состояний
+@mixin hover-effect($color) {
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $color;
+    }
+}
+
+// Утилитарные классы
+.text-primary {
+    @include text-color($color-text-primary);
+}
+
+.text-secondary {
+    @include text-color($color-text-secondary);
+}
+
+.text-accent {
+    @include text-color($color-accent);
+}
+
+.text-highlight {
+    @include text-color($color-highlight);
+}
+
+.bg-primary {
+    @include bg-color($color-bg-primary);
+}
+
+.bg-secondary {
+    @include bg-color($color-bg-secondary);
+}
+
+.bg-accent {
+    @include bg-color($color-accent);
+}
+
+.border-primary {
+    @include border-color($color-border);
+}
+
+.border-accent {
+    @include border-color($color-accent);
+}
+
+// Классы для кнопок
+.btn-primary {
+    @include button-style($color-btn-primary, $color-btn-text);
+}
+
+.btn-secondary {
+    @include button-style($color-btn-secondary, $color-text-primary);
+}
+
+.btn-accent {
+    @include button-style($color-accent, $color-btn-text);
+}
+
+// Классы для состояний
+.hover-accent {
+    @include hover-effect($color-hover);
+}
+
+.hover-primary {
+    @include hover-effect($color-primary);
+}
+
+.hover-secondary {
+    @include hover-effect($color-secondary);
+}
+
+// Градиенты
+@mixin gradient-primary {
+    background: linear-gradient(135deg, $color-primary 0%, $color-secondary 100%);
+}
+
+@mixin gradient-accent {
+    background: linear-gradient(135deg, $color-accent 0%, $color-highlight 100%);
+}
+
+.gradient-primary {
+    @include gradient-primary;
+}
+
+.gradient-accent {
+    @include gradient-accent;
+}
+
+// Тени
+@mixin shadow-primary {
+    box-shadow: 0 4px 6px rgba($color-primary, 0.3);
+}
+
+@mixin shadow-accent {
+    box-shadow: 0 4px 6px rgba($color-accent, 0.3);
+}
+
+.shadow-primary {
+    @include shadow-primary;
+}
+
+.shadow-accent {
+    @include shadow-accent;
+}

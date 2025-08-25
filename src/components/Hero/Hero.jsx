@@ -12,7 +12,7 @@ const Hero = () => {
                     <h1 className="hero-title">
                         КРУТТ - ваш проводник в мир идеальной стрижки
                     </h1>
-                    
+
                     <div className="hero-actions">
                         <Button variant="primary" size="large">
                             Записаться
@@ -28,8 +28,8 @@ const Hero = () => {
             <div className="hero-image-blocks">
                 <div className="image-block">
                     <div className="image-container">
-                        <img 
-                            src={getImageUrl('component-image__image/background_background-909_100909.webp')} 
+                        <img
+                            src={getImageUrl('component-image__image/background_background-909_100909.webp')}
                             alt="Стрижка и стиль"
                             className="block-image"
                         />
@@ -41,7 +41,7 @@ const Hero = () => {
                             <div className="image-arrow">
                                 <div className="arrow-circle">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                             </div>
@@ -51,8 +51,8 @@ const Hero = () => {
 
                 <div className="image-block">
                     <div className="image-container">
-                        <img 
-                            src={getImageUrl('component-image__image/background_background-904_100904.webp')} 
+                        <img
+                            src={getImageUrl('component-image__image/background_background-904_100904.webp')}
                             alt="Бритье и уход"
                             className="block-image"
                         />
@@ -64,7 +64,7 @@ const Hero = () => {
                             <div className="image-arrow">
                                 <div className="arrow-circle">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                             </div>
@@ -74,8 +74,8 @@ const Hero = () => {
 
                 <div className="image-block">
                     <div className="image-container">
-                        <img 
-                            src={getImageUrl('component-image__image/background_background-899_100899.webp')} 
+                        <img
+                            src={getImageUrl('component-image__image/background_background-899_100899.webp')}
                             alt="Атмосфера и комфорт"
                             className="block-image"
                         />
@@ -87,7 +87,7 @@ const Hero = () => {
                             <div className="image-arrow">
                                 <div className="arrow-circle">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                             </div>

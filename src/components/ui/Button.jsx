@@ -1,5 +1,5 @@
-import React from 'react'
-import { COLORS, theme } from '../../constants/colors'
+import React, { useState } from 'react'
+import { COLORS, theme, colorUtils } from '../../constants/colors'
 
 const VARIANTS = {
     primary: ({ disabled }) => ({
@@ -66,8 +66,23 @@ export const Button = ({
     style,
     ...rest
 }) => {
+    const [isHovered, setIsHovered] = useState(false)
     const variantStyle = (VARIANTS[variant] || VARIANTS.primary)({ disabled })
     const sizeStyle = SIZES[size] || SIZES.medium
+
+    const getHoverStyle = () => {
+        if (disabled) return {}
+        switch (variant) {
+            case 'secondary':
+                return {
+                    backgroundColor: COLORS.ACCENT,
+                    borderColor: COLORS.ACCENT,
+                    color: COLORS.BTN_TEXT,
+                }
+            default:
+                return {}
+        }
+    }
 
     const combinedStyle = {
         ...baseStyle,
@@ -75,7 +90,8 @@ export const Button = ({
         ...variantStyle,
         width: fullWidth ? '100%' : 'auto',
         opacity: disabled ? 0.7 : 1,
-        boxShadow: disabled ? 'none' : theme.shadows.button,
+        boxShadow: 'none',
+        ...(isHovered ? getHoverStyle() : {}),
         ...style,
     }
 
@@ -86,6 +102,8 @@ export const Button = ({
             disabled={disabled}
             className={className}
             style={combinedStyle}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             {...rest}
         >
             {children}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { COLORS } from '../constants/colors'
+import { ServiceCard } from './ui/ServiceCard'
 import { Button } from './ui/Button'
 
 const Services = () => {
@@ -72,16 +73,12 @@ const Services = () => {
                         <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Основные услуги</h3>
                         <div className="services-list">
                             {mainServices.map((service, index) => (
-                                <div key={index} className="service-item" style={{
-                                    borderColor: COLORS.BORDER,
-                                    backgroundColor: COLORS.BG_SECONDARY
-                                }}>
-                                    <div className="service-header">
-                                        <h4 style={{ color: COLORS.TEXT_PRIMARY }}>{service.name}</h4>
-                                        <span className="service-price" style={{ color: COLORS.ACCENT }}>{service.price}</span>
-                                    </div>
-                                    <p style={{ color: COLORS.TEXT_SECONDARY }}>{service.description}</p>
-                                </div>
+                                <ServiceCard
+                                    key={index}
+                                    name={service.name}
+                                    price={service.price}
+                                    description={service.description}
+                                />
                             ))}
                         </div>
                     </div>
@@ -90,16 +87,12 @@ const Services = () => {
                         <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Дополнительные услуги</h3>
                         <div className="services-list">
                             {additionalServices.map((service, index) => (
-                                <div key={index} className="service-item" style={{
-                                    borderColor: COLORS.BORDER,
-                                    backgroundColor: COLORS.BG_SECONDARY
-                                }}>
-                                    <div className="service-header">
-                                        <h4 style={{ color: COLORS.TEXT_PRIMARY }}>{service.name}</h4>
-                                        <span className="service-price" style={{ color: COLORS.ACCENT }}>{service.price}</span>
-                                    </div>
-                                    <p style={{ color: COLORS.TEXT_SECONDARY }}>{service.description}</p>
-                                </div>
+                                <ServiceCard
+                                    key={index}
+                                    name={service.name}
+                                    price={service.price}
+                                    description={service.description}
+                                />
                             ))}
                         </div>
                     </div>

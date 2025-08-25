@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { COLORS } from '../constants/colors'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,8 +13,8 @@ const Header = () => {
             <div className="container">
                 <div className="header-content">
                     <div className="logo">
-                        <h1>КРУТТ</h1>
-                        <span>Мужская парикмахерская</span>
+                        <h1 style={{ color: COLORS.ACCENT }}>КРУТТ</h1>
+                        <span style={{ color: COLORS.TEXT_SECONDARY }}>Мужская парикмахерская</span>
                     </div>
 
                     <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
@@ -26,15 +27,24 @@ const Header = () => {
                     </nav>
 
                     <div className="header-actions">
-                        <a href="tel:+79936380008" className="phone">+7 (993) 638-00-08</a>
-                        <button className="btn btn-primary">Записаться</button>
+                        <a href="tel:+79936380008" className="phone" style={{ color: COLORS.TEXT_PRIMARY }}>+7 (993) 638-00-08</a>
+                        <button
+                            className="btn btn-primary"
+                            style={{
+                                backgroundColor: COLORS.BTN_PRIMARY,
+                                color: COLORS.BTN_TEXT
+                            }}
+                        >
+                            Записаться
+                        </button>
                         <button
                             className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
                             onClick={toggleMenu}
+                            style={{ backgroundColor: 'transparent' }}
                         >
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span style={{ backgroundColor: COLORS.TEXT_PRIMARY }}></span>
+                            <span style={{ backgroundColor: COLORS.TEXT_PRIMARY }}></span>
+                            <span style={{ backgroundColor: COLORS.TEXT_PRIMARY }}></span>
                         </button>
                     </div>
                 </div>

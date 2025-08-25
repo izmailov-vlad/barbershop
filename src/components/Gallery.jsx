@@ -1,4 +1,5 @@
 import React from 'react'
+import { COLORS } from '../constants/colors'
 
 const Gallery = () => {
     const galleryItems = [
@@ -14,16 +15,19 @@ const Gallery = () => {
         <section id="gallery" className="gallery">
             <div className="container">
                 <div className="section-header">
-                    <h2>Стрижки наших постоянных посетителей</h2>
-                    <p>Записаться к нам по телефону: <a href="tel:+79936380008">+7 (993) 638-00-08</a></p>
+                    <h2 style={{ color: COLORS.TEXT_PRIMARY }}>Стрижки наших постоянных посетителей</h2>
+                    <p style={{ color: COLORS.TEXT_SECONDARY }}>Записаться к нам по телефону: <a href="tel:+79936380008" style={{ color: COLORS.ACCENT }}>+7 (993) 638-00-08</a></p>
                 </div>
 
                 <div className="gallery-grid">
                     {galleryItems.map((item) => (
                         <div key={item.id} className="gallery-item">
-                            <div className="gallery-placeholder">
+                            <div className="gallery-placeholder" style={{
+                                backgroundColor: COLORS.BORDER,
+                                color: COLORS.TEXT_SECONDARY
+                            }}>
                                 <span>Фото работы</span>
-                                <div className="gallery-overlay">
+                                <div className="gallery-overlay" style={{ color: COLORS.TEXT_PRIMARY }}>
                                     <h4>{item.title}</h4>
                                     <p>{item.category}</p>
                                 </div>
@@ -32,10 +36,18 @@ const Gallery = () => {
                     ))}
                 </div>
 
-                <div className="gallery-cta">
-                    <h3>Приезжайте к нам в гости!</h3>
-                    <p>Встретим вас, предложим напитки, сделаем крутую стрижку и пообщаемся на мужские темы</p>
-                    <button className="btn btn-primary btn-large">Записаться на стрижку</button>
+                <div className="gallery-cta" style={{ backgroundColor: COLORS.BG_SECONDARY }}>
+                    <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Приезжайте к нам в гости!</h3>
+                    <p style={{ color: COLORS.TEXT_SECONDARY }}>Встретим вас, предложим напитки, сделаем крутую стрижку и пообщаемся на мужские темы</p>
+                    <button
+                        className="btn btn-primary btn-large"
+                        style={{
+                            backgroundColor: COLORS.BTN_PRIMARY,
+                            color: COLORS.BTN_TEXT
+                        }}
+                    >
+                        Записаться на стрижку
+                    </button>
                 </div>
             </div>
         </section>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { COLORS } from '../constants/colors'
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -25,37 +26,37 @@ const Contact = () => {
         <section id="contact" className="contact">
             <div className="container">
                 <div className="section-header">
-                    <h2>Контакты и карта</h2>
+                    <h2 style={{ color: COLORS.TEXT_PRIMARY }}>Контакты и карта</h2>
                 </div>
 
                 <div className="contact-content">
                     <div className="contact-info">
                         <div className="contact-item">
-                            <h3>Адрес</h3>
-                            <p>г. Санкт-Петербург, Тосина 6<br />(около 8 парадной)</p>
+                            <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Адрес</h3>
+                            <p style={{ color: COLORS.TEXT_SECONDARY }}>г. Санкт-Петербург, Тосина 6<br />(около 8 парадной)</p>
                         </div>
 
                         <div className="contact-item">
-                            <h3>Телефон</h3>
-                            <p><a href="tel:+79936380008">+7 (993) 638-00-08</a></p>
+                            <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Телефон</h3>
+                            <p style={{ color: COLORS.TEXT_SECONDARY }}><a href="tel:+79936380008" style={{ color: COLORS.ACCENT }}>+7 (993) 638-00-08</a></p>
                         </div>
 
                         <div className="contact-item">
-                            <h3>Email</h3>
-                            <p><a href="mailto:krutt.barbershop@yandex.ru">krutt.barbershop@yandex.ru</a></p>
+                            <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Email</h3>
+                            <p style={{ color: COLORS.TEXT_SECONDARY }}><a href="mailto:krutt.barbershop@yandex.ru" style={{ color: COLORS.ACCENT }}>krutt.barbershop@yandex.ru</a></p>
                         </div>
 
                         <div className="contact-item">
-                            <h3>Режим работы</h3>
-                            <p>Пн-Вс: 10:00 - 22:00</p>
+                            <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Режим работы</h3>
+                            <p style={{ color: COLORS.TEXT_SECONDARY }}>Пн-Вс: 10:00 - 22:00</p>
                         </div>
                     </div>
 
                     <div className="contact-form">
-                        <h3>Записаться на стрижку</h3>
+                        <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Записаться на стрижку</h3>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <label htmlFor="name">Имя</label>
+                                <label htmlFor="name" style={{ color: COLORS.TEXT_PRIMARY }}>Имя</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -63,11 +64,16 @@ const Contact = () => {
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     required
+                                    style={{
+                                        borderColor: COLORS.BORDER,
+                                        backgroundColor: COLORS.BG_PRIMARY,
+                                        color: COLORS.TEXT_PRIMARY
+                                    }}
                                 />
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="phone">Телефон *</label>
+                                <label htmlFor="phone" style={{ color: COLORS.TEXT_PRIMARY }}>Телефон *</label>
                                 <input
                                     type="tel"
                                     id="phone"
@@ -75,28 +81,48 @@ const Contact = () => {
                                     value={formData.phone}
                                     onChange={handleInputChange}
                                     required
+                                    style={{
+                                        borderColor: COLORS.BORDER,
+                                        backgroundColor: COLORS.BG_PRIMARY,
+                                        color: COLORS.TEXT_PRIMARY
+                                    }}
                                 />
                             </div>
 
                             <div className="form-group">
-                                <label htmlFor="message">Сообщение</label>
+                                <label htmlFor="message" style={{ color: COLORS.TEXT_PRIMARY }}>Сообщение</label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     value={formData.message}
                                     onChange={handleInputChange}
                                     rows="4"
+                                    style={{
+                                        borderColor: COLORS.BORDER,
+                                        backgroundColor: COLORS.BG_PRIMARY,
+                                        color: COLORS.TEXT_PRIMARY
+                                    }}
                                 />
                             </div>
 
-                            <button type="submit" className="btn btn-primary btn-large">
+                            <button
+                                type="submit"
+                                className="btn btn-primary btn-large"
+                                style={{
+                                    backgroundColor: COLORS.BTN_PRIMARY,
+                                    color: COLORS.BTN_TEXT
+                                }}
+                            >
                                 Отправить
                             </button>
                         </form>
                     </div>
                 </div>
 
-                <div className="map-placeholder">
+                <div className="map-placeholder" style={{
+                    backgroundColor: COLORS.BORDER,
+                    color: COLORS.TEXT_SECONDARY
+                }}>
                     <div className="map-content">
                         <span>Карта</span>
                         <p>Санкт-Петербург, ул. Тосина 6</p>

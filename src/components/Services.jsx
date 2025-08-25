@@ -1,4 +1,5 @@
 import React from 'react'
+import { COLORS } from '../constants/colors'
 
 const Services = () => {
     const mainServices = [
@@ -62,35 +63,41 @@ const Services = () => {
         <section id="services" className="services">
             <div className="container">
                 <div className="section-header">
-                    <h2>Прайс на все услуги</h2>
+                    <h2 style={{ color: COLORS.TEXT_PRIMARY }}>Прайс на все услуги</h2>
                 </div>
 
                 <div className="services-grid">
                     <div className="services-section">
-                        <h3>Основные услуги</h3>
+                        <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Основные услуги</h3>
                         <div className="services-list">
                             {mainServices.map((service, index) => (
-                                <div key={index} className="service-item">
+                                <div key={index} className="service-item" style={{
+                                    borderColor: COLORS.BORDER,
+                                    backgroundColor: COLORS.BG_SECONDARY
+                                }}>
                                     <div className="service-header">
-                                        <h4>{service.name}</h4>
-                                        <span className="service-price">{service.price}</span>
+                                        <h4 style={{ color: COLORS.TEXT_PRIMARY }}>{service.name}</h4>
+                                        <span className="service-price" style={{ color: COLORS.ACCENT }}>{service.price}</span>
                                     </div>
-                                    <p>{service.description}</p>
+                                    <p style={{ color: COLORS.TEXT_SECONDARY }}>{service.description}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     <div className="services-section">
-                        <h3>Дополнительные услуги</h3>
+                        <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Дополнительные услуги</h3>
                         <div className="services-list">
                             {additionalServices.map((service, index) => (
-                                <div key={index} className="service-item">
+                                <div key={index} className="service-item" style={{
+                                    borderColor: COLORS.BORDER,
+                                    backgroundColor: COLORS.BG_SECONDARY
+                                }}>
                                     <div className="service-header">
-                                        <h4>{service.name}</h4>
-                                        <span className="service-price">{service.price}</span>
+                                        <h4 style={{ color: COLORS.TEXT_PRIMARY }}>{service.name}</h4>
+                                        <span className="service-price" style={{ color: COLORS.ACCENT }}>{service.price}</span>
                                     </div>
-                                    <p>{service.description}</p>
+                                    <p style={{ color: COLORS.TEXT_SECONDARY }}>{service.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -98,7 +105,15 @@ const Services = () => {
                 </div>
 
                 <div className="services-cta">
-                    <button className="btn btn-primary btn-large">Записаться</button>
+                    <button
+                        className="btn btn-primary btn-large"
+                        style={{
+                            backgroundColor: COLORS.BTN_PRIMARY,
+                            color: COLORS.BTN_TEXT
+                        }}
+                    >
+                        Записаться
+                    </button>
                 </div>
             </div>
         </section>

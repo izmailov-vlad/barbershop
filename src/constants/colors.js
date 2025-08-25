@@ -118,6 +118,27 @@ export const colorUtils = {
     // Получить контрастный цвет для текста
     getContrastText: (color) => {
         return colorUtils.isLight(color) ? COLORS.TEXT_PRIMARY : COLORS.TEXT_SECONDARY;
+    },
+
+    // Получить градиент
+    getGradient: (color1, color2, direction = 'to right') => {
+        const c1 = COLORS[color1] || color1;
+        const c2 = COLORS[color2] || color2;
+        return `linear-gradient(${direction}, ${c1}, ${c2})`;
+    },
+
+    // Получить тень с цветом
+    getShadow: (color, blur = '4px', spread = '0px', opacity = 0.3) => {
+        const rgb = COLORS_RGB[color] || color;
+        return `0 2px ${blur} ${spread} rgba(${rgb}, ${opacity})`;
+    },
+
+    // Получить цвет с прозрачностью для CSS переменных
+    getCSSVariable: (colorName, opacity = 1) => {
+        if (opacity === 1) {
+            return `var(--color-${colorName.toLowerCase()})`;
+        }
+        return `rgba(var(--color-${colorName.toLowerCase()}-rgb), ${opacity})`;
     }
 };
 
@@ -143,6 +164,8 @@ export const theme = {
         medium: `0 4px 8px rgba(${COLORS_RGB.PRIMARY}, 0.15)`,
         large: `0 8px 16px rgba(${COLORS_RGB.PRIMARY}, 0.2)`,
         accent: `0 4px 8px rgba(${COLORS_RGB.ACCENT}, 0.3)`,
+        button: `0 4px 12px rgba(${COLORS_RGB.ACCENT}, 0.3)`,
+        card: `0 8px 25px rgba(${COLORS_RGB.ACCENT}, 0.2)`,
     },
 
     // Переходы
@@ -150,6 +173,8 @@ export const theme = {
         fast: '0.15s ease',
         normal: '0.3s ease',
         slow: '0.5s ease',
+        button: 'all 0.3s ease',
+        hover: 'all 0.3s ease',
     },
 
     // Границы
@@ -158,7 +183,40 @@ export const theme = {
         medium: '8px',
         large: '16px',
         round: '50%',
+        button: '6px',
+        card: '8px',
+    },
+
+    // Анимации
+    animations: {
+        pulse: 'pulse 2s infinite',
+        fadeIn: 'fadeIn 0.5s ease-in',
+        slideUp: 'slideUp 0.3s ease-out',
+        scale: 'scale 0.2s ease-in-out',
     }
+};
+
+// CSS переменные для использования в стилях
+export const cssVariables = {
+    '--color-primary': COLORS.PRIMARY,
+    '--color-secondary': COLORS.SECONDARY,
+    '--color-accent': COLORS.ACCENT,
+    '--color-text-primary': COLORS.TEXT_PRIMARY,
+    '--color-text-secondary': COLORS.TEXT_SECONDARY,
+    '--color-bg-primary': COLORS.BG_PRIMARY,
+    '--color-bg-secondary': COLORS.BG_SECONDARY,
+    '--color-btn-primary': COLORS.BTN_PRIMARY,
+    '--color-btn-secondary': COLORS.BTN_SECONDARY,
+    '--color-btn-text': COLORS.BTN_TEXT,
+    '--color-border': COLORS.BORDER,
+    '--color-highlight': COLORS.HIGHLIGHT,
+    '--color-hover': COLORS.HOVER,
+    '--color-active': COLORS.ACTIVE,
+    '--color-disabled': COLORS.DISABLED,
+    '--color-success': COLORS.SUCCESS,
+    '--color-error': COLORS.ERROR,
+    '--color-warning': COLORS.WARNING,
+    '--color-info': COLORS.INFO,
 };
 
 export default COLORS;

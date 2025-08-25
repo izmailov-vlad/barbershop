@@ -1,4 +1,5 @@
 import React from 'react'
+import { COLORS } from '../constants/colors'
 
 const Team = () => {
     const teamMembers = [
@@ -39,33 +40,47 @@ const Team = () => {
         <section id="masters" className="team">
             <div className="container">
                 <div className="section-header">
-                    <h2>Мы отличаемся от других</h2>
+                    <h2 style={{ color: COLORS.TEXT_PRIMARY }}>Мы отличаемся от других</h2>
                 </div>
 
                 <div className="features-grid">
                     {features.map((feature, index) => (
-                        <div key={index} className="feature-card">
-                            <h3>{feature.title}</h3>
-                            <p>{feature.description}</p>
+                        <div key={index} className="feature-card" style={{
+                            backgroundColor: COLORS.BG_PRIMARY,
+                            borderColor: COLORS.BORDER
+                        }}>
+                            <h3 style={{ color: COLORS.TEXT_PRIMARY }}>{feature.title}</h3>
+                            <p style={{ color: COLORS.TEXT_SECONDARY }}>{feature.description}</p>
                         </div>
                     ))}
                 </div>
 
                 <div className="team-section">
-                    <h3>Наша команда</h3>
+                    <h3 style={{ color: COLORS.TEXT_PRIMARY }}>Наша команда</h3>
                     <div className="team-grid">
                         {teamMembers.map((member, index) => (
                             <div key={index} className="team-member">
                                 <div className="member-image">
-                                    <div className="member-placeholder">
+                                    <div className="member-placeholder" style={{
+                                        backgroundColor: COLORS.BORDER,
+                                        color: COLORS.TEXT_SECONDARY
+                                    }}>
                                         <span>Фото {member.name}</span>
                                     </div>
                                 </div>
                                 <div className="member-info">
-                                    <h4>{member.name}</h4>
-                                    <p className="member-position">{member.position}</p>
-                                    <p className="member-description">{member.description}</p>
-                                    <button className="btn btn-primary">Записаться к мастеру</button>
+                                    <h4 style={{ color: COLORS.TEXT_PRIMARY }}>{member.name}</h4>
+                                    <p className="member-position" style={{ color: COLORS.TEXT_SECONDARY }}>{member.position}</p>
+                                    <p className="member-description" style={{ color: COLORS.TEXT_SECONDARY }}>{member.description}</p>
+                                    <button
+                                        className="btn btn-primary"
+                                        style={{
+                                            backgroundColor: COLORS.BTN_PRIMARY,
+                                            color: COLORS.BTN_TEXT
+                                        }}
+                                    >
+                                        Записаться к мастеру
+                                    </button>
                                 </div>
                             </div>
                         ))}

@@ -1,0 +1,25 @@
+# Исключаем все скачанные изображения
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+
+# Исключаем автоматически сгенерированные файлы
+BackgroundImages.js
+ServiceImages.js
+TeamImages.js
+GalleryImages.js
+LogoImages.js
+IconImages.js
+OtherImages.js
+AllImages.js
+index.js
+images-metadata.json
+download-report.md
+DEVELOPER_README.md
+
+# Оставляем только README и .gitignore
+!README.md
+!.gitignore

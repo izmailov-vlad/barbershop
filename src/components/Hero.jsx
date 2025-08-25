@@ -8,8 +8,8 @@ const Hero = () => {
                 <div className="hero-content">
                     <div className="hero-text">
                         <h1 className="hero-title" style={{ color: COLORS.TEXT_PRIMARY }}>
-                            ДЕЛАЕМ ОТЛИЧНЫЕ<br />
-                            МУЖСКИЕ СТРИЖКИ
+                            Делаем отличные<br />
+                            мужские стрижки
                         </h1>
                         <p className="hero-subtitle" style={{ color: COLORS.TEXT_SECONDARY }}>
                             Мужская парикмахерская с оригинальной концепцией. Создаем свой стиль
@@ -27,7 +27,7 @@ const Hero = () => {
                                     color: COLORS.BTN_TEXT
                                 }}
                             >
-                                Услуги
+                                Записаться на стрижку
                             </button>
                             <button
                                 className="btn btn-secondary btn-large"
@@ -36,18 +36,12 @@ const Hero = () => {
                                     borderColor: COLORS.BTN_PRIMARY
                                 }}
                             >
-                                Записаться на стрижку
+                                Услуги
                             </button>
+
                         </div>
                     </div>
-                    <div className="hero-image">
-                        <div className="hero-placeholder" style={{
-                            backgroundColor: COLORS.BORDER,
-                            color: COLORS.TEXT_SECONDARY
-                        }}>
-                            <span>Фото интерьера</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

@@ -14,12 +14,11 @@ const Hero = () => {
                         <p className="hero-subtitle" style={{ color: COLORS.TEXT_SECONDARY }}>
                             Мужская парикмахерская с оригинальной концепцией. Создаем свой стиль
                         </p>
-                        <div className="hero-badge" style={{
-                            backgroundColor: COLORS.ACCENT,
-                            color: COLORS.BTN_TEXT
+                        <p className="hero-badge-text" style={{
+                            color: COLORS.ACCENT
                         }}>
-                            <span>Каждая 8 стрижка - бесплатно</span>
-                        </div>
+                            Каждая 8 стрижка - бесплатно
+                        </p>
                         <div className="hero-actions">
                             <button
                                 className="btn btn-primary btn-large"

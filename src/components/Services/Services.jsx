@@ -1,7 +1,8 @@
 import React from 'react'
-import { COLORS } from '../constants/colors'
-import { ServiceCard } from './ui/ServiceCard'
-import { Button } from './ui/Button'
+import './Services.css'
+import { COLORS } from '../../constants/colors'
+import { Button } from '../ui/Button'
+import { ServiceCard } from '../ui/ServiceCard'
 
 const Services = () => {
     const mainServices = [

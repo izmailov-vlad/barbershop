@@ -1,6 +1,7 @@
 import React from 'react'
-import { COLORS } from '../constants/colors'
-import { Button } from './ui/Button'
+import './Hero.css'
+import { Button } from '../ui/Button'
+import { COLORS } from '../../constants/colors'
 
 const Hero = () => {
     return (
@@ -9,16 +10,14 @@ const Hero = () => {
                 <div className="hero-content">
                     <div className="hero-text">
                         <h1 className="hero-title" style={{ color: COLORS.TEXT_PRIMARY }}>
-                            Делаем отличные<br />
-                            мужские стрижки
+                            Крутт<br />
+                            <span style={{ fontSize: '0.8em', fontWeight: 'normal' }}>БАРБЕРШОП</span>
                         </h1>
                         <p className="hero-subtitle" style={{ color: COLORS.TEXT_SECONDARY }}>
-                            Мужская парикмахерская с оригинальной концепцией. Создаем свой стиль
+                            Мужская парикмахерская с оригинальной концепцией.
                         </p>
-                        <p className="hero-badge-text" style={{
-                            color: COLORS.ACCENT
-                        }}>
-                            Каждая 8 стрижка - бесплатно
+                        <p className="hero-subtitle" style={{ color: COLORS.TEXT_SECONDARY }}>
+                            Создаем свой стиль в атмосфере настоящего мужского клуба.
                         </p>
                         <div className="hero-actions">
                             <Button variant="primary" size="large">

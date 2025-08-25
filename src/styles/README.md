@@ -1,201 +1,64 @@
-# Цветовая палитра барбершопа "Крутт"
-
-Этот файл содержит инструкции по использованию цветовой палитры, основанной на дизайне сайта https://krutt.ru/.
+# Стили для барбершопа "Крутт"
 
 ## Структура файлов
 
-- `colors.css` - CSS переменные и утилитарные классы
-- `_colors.scss` - SCSS переменные и миксины
-- `../constants/colors.js` - JavaScript константы и утилиты
-- `../types/colors.ts` - TypeScript типы и интерфейсы
+- `_colors.scss` - SCSS переменные и миксины для цветов
+- `colors.css` - CSS переменные цветов
+- `no-animations.css` - Полное отключение всех анимаций для кнопок
 
-## Основные цвета
+## Компоненты
 
-### Брендинг
-- **Primary** (`#1a1a1a`) - Основной темный цвет
-- **Secondary** (`#8B4513`) - Коричневый цвет в стиле барбершопа
-- **Accent** (`#D4AF37`) - Золотистый акцентный цвет
+### Button
+Компонент кнопки находится в `src/components/ui/Button/` и включает:
+- `Button.jsx` - React компонент
+- `Button.scss` - SCSS стили
+- `index.js` - Экспорт
+- `README.md` - Документация
 
-### Текст
-- **Text Primary** (`#FFFFFF`) - Основной текст (белый)
-- **Text Secondary** (`#CCCCCC`) - Вторичный текст (светло-серый)
+## Отключение анимаций
 
-### Фон
-- **Background Primary** (`#000000`) - Основной фон (черный)
-- **Background Secondary** (`#1a1a1a`) - Вторичный фон (темно-серый)
+Все анимации для кнопок отключены в следующих файлах:
 
-### Кнопки
-- **Button Primary** (`#D4AF37`) - Основные кнопки (золотистые)
-- **Button Secondary** (`#8B4513`) - Вторичные кнопки (коричневые)
-- **Button Text** (`#000000`) - Текст на кнопках (черный)
+1. **`Button.scss`** - Основные стили кнопок с отключенными анимациями
+2. **`App.css`** - Глобальные правила для отключения анимаций кнопок
+3. **`index.css`** - Дополнительные правила для отключения анимаций
+4. **`no-animations.css`** - Полное отключение всех типов анимаций
 
-## Использование
+### Что отключено:
 
-### CSS переменные
+- `animation` - все CSS анимации
+- `transition` - все переходы и плавные изменения
+- `transform` - все трансформации (scale, translate, rotate и т.д.)
+- `filter` - все фильтры
+- `backdrop-filter` - фильтры фона
+- `box-shadow` - тени
+- `text-shadow` - тени текста
 
-```css
-.my-component {
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
-}
-```
+### Селекторы:
 
-### SCSS переменные
+Правила применяются ко всем элементам:
+- `button`
+- `.btn`, `[class*="btn-"]`
+- `input[type="button"]`, `input[type="submit"]`, `input[type="reset"]`
+- `.button`, `[class*="button-"]`
+- Псевдоэлементы `::before`, `::after`
+- Дочерние элементы кнопок
+- Состояния `:hover`, `:active`, `:focus`
 
-```scss
-.my-component {
-  background-color: $color-bg-primary;
-  color: $color-text-primary;
-  border: 1px solid $color-border;
-}
-```
+Все правила используют `!important` для гарантированного применения.
 
-### JavaScript/React
+## Импорт стилей
 
-```jsx
-import { COLORS } from '../constants/colors';
-
-const MyComponent = () => (
-  <div style={{ 
-    backgroundColor: COLORS.BG_PRIMARY,
-    color: COLORS.TEXT_PRIMARY 
-  }}>
-    Содержимое
-  </div>
-);
-```
-
-### Утилитарные классы
-
-```html
-<div class="bg-primary text-primary">
-  <button class="btn-primary">Кнопка</button>
-  <span class="text-accent">Акцентный текст</span>
-</div>
-```
-
-## Миксины SCSS
-
-### Кнопки
-
-```scss
-.my-button {
-  @include button-style($color-btn-primary);
-}
-```
-
-### Цвета
-
-```scss
-.my-element {
-  @include text-color($color-text-primary);
-  @include bg-color($color-bg-secondary);
-  @include border-color($color-border);
-}
-```
-
-### Эффекты
-
-```scss
-.my-element {
-  @include hover-effect($color-hover);
-  @include shadow-primary;
-  @include gradient-accent;
-}
-```
-
-## Утилиты JavaScript
-
-### Прозрачность
-
-```javascript
-import { colorUtils } from '../constants/colors';
-
-const semiTransparent = colorUtils.withOpacity('ACCENT', 0.5);
-```
-
-### Затемнение/осветление
-
-```javascript
-const darker = colorUtils.darken('ACCENT', 20); // На 20% темнее
-const lighter = colorUtils.lighten('ACCENT', 20); // На 20% светлее
-```
-
-### Контрастный текст
-
-```javascript
-const textColor = colorUtils.getContrastText('ACCENT');
-```
-
-## Состояния
-
-### Hover
-- **Hover** (`#B8941F`) - Цвет при наведении
-
-### Active
-- **Active** (`#8B6F1A`) - Цвет при активации
-
-### Disabled
-- **Disabled** (`#666666`) - Цвет для отключенных элементов
-
-## Системные цвета
-
-- **Success** (`#28a745`) - Успех
-- **Error** (`#dc3545`) - Ошибка
-- **Warning** (`#ffc107`) - Предупреждение
-- **Info** (`#17a2b8`) - Информация
-
-## Доступность
-
-Цветовая схема обеспечивает высокий контраст между темным фоном и светлым текстом, что соответствует стандартам WCAG 2.1.
-
-## Рекомендации
-
-1. Используйте основные цвета для ключевых элементов
-2. Применяйте акцентные цвета для призывов к действию
-3. Обеспечивайте достаточный контраст для читаемости
-4. Используйте системные цвета для соответствующих состояний
-5. Применяйте утилитарные классы для быстрого стилизования
-
-## Примеры компонентов
-
-### Кнопка
+Стили кнопок теперь импортируются через компонент:
 
 ```jsx
-import { COLORS } from '../constants/colors';
-
-const Button = ({ variant = 'primary', children, ...props }) => {
-  const buttonStyle = {
-    backgroundColor: COLORS[`BTN_${variant.toUpperCase()}`],
-    color: variant === 'primary' ? COLORS.BTN_TEXT : COLORS.TEXT_PRIMARY,
-    border: 'none',
-    padding: '12px 24px',
-    borderRadius: '8px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease'
-  };
-
-  return (
-    <button style={buttonStyle} {...props}>
-      {children}
-    </button>
-  );
-};
+import { Button } from './ui/Button';
+// Стили автоматически подключаются с компонентом
 ```
 
-### Карточка
+Основные стили импортируются в `main.jsx`:
 
 ```jsx
-const Card = ({ children }) => (
-  <div style={{
-    backgroundColor: COLORS.BG_SECONDARY,
-    border: `1px solid ${COLORS.BORDER}`,
-    borderRadius: '12px',
-    padding: '24px',
-    boxShadow: `0 4px 8px rgba(${COLORS_RGB.PRIMARY}, 0.15)`
-  }}>
-    {children}
-  </div>
-);
+import './components/ui/Button/Button.scss';
+import './styles/no-animations.css';
 ```

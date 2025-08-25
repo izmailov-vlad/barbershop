@@ -1,0 +1,181 @@
+// Стили кнопок для барбершопа "Крутт"
+
+// Отключение всех анимаций для кнопок
+.btn,
+.btn *,
+.btn::before,
+.btn::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+// Базовый класс кнопки
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    line-height: 1.2;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    
+    // Отключение всех анимаций
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+// Размеры кнопок
+.btn-small {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn-medium {
+    padding: 10px 16px;
+    font-size: 16px;
+}
+
+.btn-large {
+    padding: 14px 20px;
+    font-size: 18px;
+}
+
+// Варианты кнопок
+.btn-primary {
+    background-color: var(--color-btn-primary);
+    color: var(--color-btn-text);
+    border: none;
+    
+    &:hover {
+        background-color: var(--color-hover);
+    }
+    
+    &:active {
+        background-color: var(--color-active);
+    }
+    
+    &:disabled {
+        background-color: var(--color-disabled);
+        cursor: not-allowed;
+    }
+}
+
+.btn-secondary {
+    background-color: var(--color-btn-secondary);
+    color: var(--color-text-primary);
+    border: none;
+    
+    &:hover {
+        background-color: var(--color-hover);
+    }
+    
+    &:active {
+        background-color: var(--color-active);
+    }
+    
+    &:disabled {
+        background-color: var(--color-disabled);
+        cursor: not-allowed;
+    }
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-btn-text);
+    border: none;
+    
+    &:hover {
+        background-color: var(--color-hover);
+    }
+    
+    &:active {
+        background-color: var(--color-active);
+    }
+    
+    &:disabled {
+        background-color: var(--color-disabled);
+        cursor: not-allowed;
+    }
+}
+
+// Состояния наведения (без анимаций)
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-accent:hover {
+    // Анимации отключены
+}
+
+// Состояния активности (без анимаций)
+.btn-primary:active,
+.btn-secondary:active,
+.btn-accent:active {
+    // Анимации отключены
+}
+
+// Состояния отключения
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-accent:disabled {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+// Состояния фокуса (без анимаций)
+.btn:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    
+    // Анимации отключены
+}
+
+// Утилитарные классы
+.w-full {
+    width: 100%;
+}
+
+// Отключение анимаций для всех состояний
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:disabled {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+// Отключение анимаций для псевдоэлементов
+.btn::before,
+.btn::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+// Отключение анимаций для дочерних элементов
+.btn * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}

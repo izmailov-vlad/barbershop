@@ -1,6 +1,7 @@
 import React from 'react'
-import { COLORS } from '../constants/colors'
-import { Button } from './ui/Button'
+import './Team.css'
+import { COLORS } from '../../constants/colors'
+import { Button } from '../ui/Button'
 
 const Team = () => {
     const teamMembers = [

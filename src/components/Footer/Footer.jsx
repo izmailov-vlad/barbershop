@@ -1,5 +1,6 @@
 import React from 'react'
-import { COLORS } from '../constants/colors'
+import './Footer.css'
+import { COLORS } from '../../constants/colors'
 
 const Footer = () => {
     return (

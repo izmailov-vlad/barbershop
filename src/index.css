@@ -48,6 +48,20 @@ a:focus {
   outline-offset: 2px;
 }
 
+/* Отключение анимаций для всех кнопок */
+button,
+.btn,
+[class*="btn-"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
 /* Remove default button styles */
 button {
   background: none;

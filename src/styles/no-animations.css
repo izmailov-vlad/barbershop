@@ -1,0 +1,121 @@
+/* Полное отключение всех анимаций для кнопок */
+
+/* Основные селекторы кнопок */
+button,
+.btn,
+[class*="btn-"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button,
+[class*="button-"] {
+    /* Отключение всех анимаций */
+    animation: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    animation-direction: normal !important;
+    animation-fill-mode: none !important;
+    animation-play-state: running !important;
+    animation-timing-function: ease !important;
+    
+    /* Отключение всех переходов */
+    transition: none !important;
+    transition-property: none !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    transition-timing-function: ease !important;
+    
+    /* Отключение всех трансформаций */
+    transform: none !important;
+    transform-origin: 50% 50% 0 !important;
+    transform-style: flat !important;
+    perspective: none !important;
+    perspective-origin: 50% 50% !important;
+    backface-visibility: visible !important;
+    
+    /* Отключение фильтров */
+    filter: none !important;
+    backdrop-filter: none !important;
+    
+    /* Отключение других эффектов */
+    box-shadow: none !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+/* Отключение анимаций для псевдоэлементов */
+button::before,
+button::after,
+.btn::before,
+.btn::after,
+[class*="btn-"]::before,
+[class*="btn-"]::after,
+input[type="button"]::before,
+input[type="button"]::after,
+input[type="submit"]::before,
+input[type="submit"]::after,
+input[type="reset"]::before,
+input[type="reset"]::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Отключение анимаций для дочерних элементов кнопок */
+button *,
+.btn *,
+[class*="btn-"] *,
+input[type="button"] *,
+input[type="submit"] *,
+input[type="reset"] * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Отключение hover эффектов с анимациями */
+button:hover,
+.btn:hover,
+[class*="btn-"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Отключение active эффектов с анимациями */
+button:active,
+.btn:active,
+[class*="btn-"]:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Отключение focus эффектов с анимациями */
+button:focus,
+.btn:focus,
+[class*="btn-"]:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}

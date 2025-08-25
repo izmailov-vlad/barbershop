@@ -1,6 +1,7 @@
 import React from 'react'
-import { COLORS } from '../constants/colors'
-import { Button } from './ui/Button'
+import './Gallery.css'
+import { COLORS } from '../../constants/colors'
+import { Button } from '../ui/Button'
 
 const Gallery = () => {
     const galleryItems = [

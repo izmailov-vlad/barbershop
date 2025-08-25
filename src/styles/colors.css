@@ -70,55 +70,7 @@
     border-color: var(--color-accent);
 }
 
-/* Классы для кнопок */
-.btn-primary {
-    background-color: var(--color-btn-primary);
-    color: var(--color-btn-text);
-    border: none;
-}
-
-.btn-secondary {
-    background-color: var(--color-btn-secondary);
-    color: var(--color-text-primary);
-    border: none;
-}
-
-.btn-accent {
-    background-color: var(--color-accent);
-    color: var(--color-btn-text);
-    border: none;
-}
-
-/* Состояния наведения */
-.btn-primary:hover {
-    background-color: var(--color-hover);
-}
-
-.btn-secondary:hover {
-    background-color: var(--color-hover);
-}
-
-.btn-accent:hover {
-    background-color: var(--color-hover);
-}
-
-/* Состояния активности */
-.btn-primary:active {
-    background-color: var(--color-active);
-}
-
-.btn-secondary:active {
-    background-color: var(--color-active);
-}
-
-.btn-accent:active {
-    background-color: var(--color-active);
-}
-
-/* Состояния отключения */
-.btn-primary:disabled,
-.btn-secondary:disabled,
-.btn-accent:disabled {
-    background-color: var(--color-disabled);
-    cursor: not-allowed;
+/* Утилитарные классы */
+.w-full {
+    width: 100%;
 }

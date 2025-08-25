@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { COLORS } from '../constants/colors'
-import { Button } from './ui/Button'
+import './Contact.css'
+import { COLORS } from '../../constants/colors'
+import { Button } from '../ui/Button'
 
 const Contact = () => {
     const [formData, setFormData] = useState({

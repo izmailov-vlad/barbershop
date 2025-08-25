@@ -1,4 +1,5 @@
 import React from 'react'
+import './Button.scss'
 
 export const Button = ({
     children,
@@ -25,9 +26,15 @@ export const Button = ({
     })()
 
     const sizeClass = (() => {
-        // В глобальных стилях есть класс только для large
-        if (size === 'large') return 'btn-large'
-        return ''
+        switch (size) {
+            case 'small':
+                return 'btn-small'
+            case 'large':
+                return 'btn-large'
+            case 'medium':
+            default:
+                return 'btn-medium'
+        }
     })()
 
     const classes = [

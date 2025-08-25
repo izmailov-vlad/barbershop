@@ -1,30 +1,99 @@
 import React from 'react'
 import './Hero.css'
 import { Button } from '../ui/Button'
-import { COLORS } from '../../constants/colors'
+import { getImageUrl } from '../../assets/images'
 
 const Hero = () => {
     return (
         <section className="hero">
-            <div className="container">
-            <div className="hero-content">
-                <div className="hero-text">
+            {/* Главный заголовок и кнопки */}
+            <div className="hero-header">
+                <div className="container">
                     <h1 className="hero-title">
-                        <span className="hero-title-main">Крутт</span>
-                        <span className="hero-title-sub">Барбершоп</span>
+                        КРУТТ - ваш проводник в мир идеальной стрижки
                     </h1>
-
-                    <p className="hero-description">
-                        Мужская парикмахерская с оригинальной концепцией.
-                        Создаем свой стиль в атмосфере настоящего мужского клуба.
-                    </p>
-
+                    
                     <div className="hero-actions">
-                        <button className="btn btn-primary">Записаться на стрижку</button>
-                        <button className="btn btn-secondary">Услуги и цены</button>
+                        <Button variant="primary" size="large">
+                            Записаться
+                        </Button>
+                        <Button variant="secondary" size="large">
+                            Услуги
+                        </Button>
                     </div>
                 </div>
             </div>
+
+            {/* Три блока с изображениями */}
+            <div className="hero-image-blocks">
+                <div className="image-block">
+                    <div className="image-container">
+                        <img 
+                            src={getImageUrl('component-image__image/background_background-909_100909.webp')} 
+                            alt="Стрижка и стиль"
+                            className="block-image"
+                        />
+                        <div className="image-overlay">
+                            <div className="image-text">
+                                <h3>Стрижка и стиль</h3>
+                                <p>Создаем индивидуальный образ</p>
+                            </div>
+                            <div className="image-arrow">
+                                <div className="arrow-circle">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="image-block">
+                    <div className="image-container">
+                        <img 
+                            src={getImageUrl('component-image__image/background_background-904_100904.webp')} 
+                            alt="Бритье и уход"
+                            className="block-image"
+                        />
+                        <div className="image-overlay">
+                            <div className="image-text">
+                                <h3>Бритье и уход</h3>
+                                <p>Профессиональные услуги</p>
+                            </div>
+                            <div className="image-arrow">
+                                <div className="arrow-circle">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="image-block">
+                    <div className="image-container">
+                        <img 
+                            src={getImageUrl('component-image__image/background_background-899_100899.webp')} 
+                            alt="Атмосфера и комфорт"
+                            className="block-image"
+                        />
+                        <div className="image-overlay">
+                            <div className="image-text">
+                                <h3>Атмосфера и комфорт</h3>
+                                <p>Настоящий мужской клуб</p>
+                            </div>
+                            <div className="image-arrow">
+                                <div className="arrow-circle">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )
